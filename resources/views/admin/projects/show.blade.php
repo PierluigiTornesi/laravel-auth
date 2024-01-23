@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container mt-5">
-        <h2>{{ $project->title}}</h2>
+        <h2><strong>Title Project : </strong>{{ $project->title}}</h2>
 
         <div class="mt-4 w-50">
             <p>
