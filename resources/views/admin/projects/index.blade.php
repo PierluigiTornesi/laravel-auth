@@ -17,7 +17,9 @@
                     <tr>
                     <th scope="row">{{$project->id}}</th>
                     <td>{{$project->title}}</td>
-                    <td></td>
+                    <td>
+                      <a class="btn btn-success" href="{{route('admin.projects.show', ['project' => $project->slug]) }}">Dettagli</a>
+                    </td>
                   </tr>
                 @endforeach 
             </tbody>
