@@ -24,6 +24,7 @@
                     <td>{{$project->title}}</td>
                     <td>
                       <a class="btn btn-success" href="{{route('admin.projects.show', ['project' => $project->slug]) }}">Details</a>
+                      <a class="btn btn-warning" href="{{route('admin.projects.edit', ['project' => $project->slug]) }}">Edit</a>
                     </td>
                   </tr>
                 @endforeach 
