@@ -2,7 +2,10 @@
 
 @section('content')
     <div class="container mt-5">
-        <h2>Modifica il progetto</h2>
+
+        @include('partials.previous_button')
+
+        <h2>Edit the project</h2>
 
         @if ($errors->any())
             <div class="alert alert-danger">
@@ -26,7 +29,7 @@
                 <textarea class="form-control " id="description" rows="3" name="description">{{ old('description' , $project->description)}}</textarea>
             </div>
 
-            <button class="btn btn-danger" type="submit">Edit</button>
+            <button class="btn btn-warning" type="submit">Edit</button>
         </form>
     </div>
 @endsection
