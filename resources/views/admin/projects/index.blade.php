@@ -8,7 +8,8 @@
             <a class="btn btn-success" href="{{ route('admin.projects.create')}}">Create a new project</a>
         </div>
 
-        <table class="table table-striped mt-5">
+        @if (count($projects) > 0)
+          <table class="table table-striped mt-5">
             <thead>
               <tr>
                 <th scope="col">Id</th>
@@ -28,5 +29,10 @@
                 @endforeach 
             </tbody>
           </table>
+        @else
+            <div class="alert alert-warning mt-2">
+                <p>Non esiste nessun progetto. Creane uno nuovo cliccando sul pulsante a destra.</p>
+            </div>
+        @endif
     </div>
 @endsection
